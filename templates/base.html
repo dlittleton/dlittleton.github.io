@@ -19,7 +19,7 @@
         </ul>
         <ul>
           <li>
-            <h2><a href="#">About</a></h2>
+            <h2><a href="{{ config.base_url }}">About</a></h2>
           </li>
           <li>
             <h2><a href="{{ get_url(path='@/notes/_index.md') }}"">Notes</a></h2>
@@ -29,6 +29,7 @@
           </li>
         </ul>
       </nav>
+      <hr>
     </header>
     <main>{% block content %}{% endblock %}</main>
   </body>
