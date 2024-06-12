@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="{{ get_url(path='css/pico.classless.jade.min.css') }}"
     />
-    <title>A Website</title>
+    <title>{{ page.title | default(value=section.title) }}</title>
   </head>
 
   <body>
