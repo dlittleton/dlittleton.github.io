@@ -8,7 +8,7 @@ Currently this site is generated with Zola, styled with Pico CSS, and published
 on GitHub Pages. It replaces a previous half-hearted attempt at creating a site
 using Jekyll.
 
-The source for the site can be found at: https://github.com/dlittleton/dlittleton.github.io
+The source for the site can be found on [GitHub](https://github.com/dlittleton/dlittleton.github.io).
 
 ## Resources
 
