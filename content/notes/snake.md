@@ -39,3 +39,23 @@ the complexity as a project grows.
 
 Overall I would definitely consider using it again. I'd like to give the ECS
 approach another try with a different game.
+
+## Output File Sizes
+
+If I had to pick something to complain about, it would have to be the size of
+the output files when compiling to `wasm`. The
+[documentation](https://bevy-cheatbook.github.io/platforms/wasm/size-opt.html)
+has some helpful pointers for this though that seemed to work fairly well.
+
+Here are the sizes I ended up with trying the different recommendations. The
+`lto = true` setting did more than double the compile time, but the space
+savings still seem worth it for producing the release build.
+
+| cargo flags | wasm-opt flags | Output Size (bytes) |
+|-------------|------------------|-------------|
+| None | None | 56422822 |
+| None | `-Oz` | 30939472 |
+| `opt-level = 'z'`| None | 49929119 |
+| `opt-level = 'z'`| `-Oz` | 23074894 |
+| `opt-level = 'z'`, `lto = true` | None | 25064435 |
+| `opt-level = 'z'`, `lto = true` | `-Oz` | 15821234 |
