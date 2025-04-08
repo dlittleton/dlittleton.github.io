@@ -1,0 +1,13 @@
+<canvas id="game-canvas" width={{ width }} height={{ height }}></canvas>
+<script type='module'>
+    import init from '{{ get_url(path=path) }}';
+
+    init().catch((error) => {
+        if (!error.message.startsWith("Using exceptions for control flow, don't mind me. This isn't actually an error!")) {
+            throw error;
+        }
+    });
+</script>
+<noscript>
+    Game requires JavaScript.
+</noscript>
