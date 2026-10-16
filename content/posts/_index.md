@@ -1,7 +1,7 @@
 +++
-title = "Notes"
+title = "Posts"
 sort_by = "date"
-template = "notes.html"
+template = "posts.html"
 page_template = "page.html"
 insert_anchor_links = "left"
 +++
